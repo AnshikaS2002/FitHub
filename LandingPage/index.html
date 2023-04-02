@@ -1,0 +1,244 @@
+<html>
+    <head>
+        
+        <script src="https://cdn.tailwindcss.com"></script>
+        <a href="https://www.flaticon.com/free-icons/yoga" title="yoga icons"></a>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+            *{
+                list-style: none;
+                text-decoration: none;
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: bold;
+            }
+            
+            body{
+                background: rgb(163, 243, 243); 
+            }
+            
+            
+            .wrapper .sidebar{
+                background: rgb(243, 137, 38);
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100px;
+                height: 100%;
+                padding: 10px 0;
+                transition: all 0.5s ease;    
+                overflow-x: hidden;
+                /*border: 5px solid black;*/
+               
+            }
+            
+            .wrapper .sidebar .profile{
+                margin-bottom: 30px;
+                text-align: center;
+            }
+            
+            .sidebar .wrapper .profile img{
+                display: block;
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                margin: 0 auto;
+            }
+            
+            .wrapper .sidebar .profile h3{
+                color: rgb(219, 172, 172);
+                margin: 0px 0 0px;
+                height: 5px;
+                padding-top: 2px;
+            }
+            .wrapper .sidebar ul li a{
+                display: block;
+               
+                padding: 25px 18px;
+                /*border-bottom: 2px solid rgb(150, 224, 225);*/
+                color: rgb(247, 242, 242);
+                font-size: 16px;
+                position: relative;
+            }
+            
+            .wrapper .sidebar ul li a .icon{
+                color: #0e0e0f;
+                width: 30px;
+                display: inline-block;
+                padding-top: 10px;
+            }
+            
+             
+            .wrapper .sidebar ul li a:hover,
+            .wrapper .sidebar ul li a.active{
+                background-color: rgb(246, 187, 144);
+                padding-top: 10px;
+                color:black;
+            }
+            
+            .wrapper .sidebar ul li a:hover .icon,
+            .wrapper .sidebar ul li a.active .icon{
+                background-color: white;
+                padding-top: 10px;
+            }
+            
+            .wrapper .sidebar ul li a:hover:before,
+            .wrapper .sidebar ul li a.active:before{
+                display: block;
+                padding-top: 10px;
+            
+            }
+            
+            
+            
+            .wrapper .section{
+                width: calc(100% - 255px);
+                margin-left: 0px;
+                transition: all 0.5s ease;
+            }
+            
+            .wrapper .section .top_navbar{
+                background: rgb(240, 134, 170);
+                height: 50px;
+                display: flex;
+                width: 1536px;
+                align-items: center;
+                padding: 0 5px;
+                
+            }
+            
+            .wrapper .section .top_navbar .hamburger a{
+                font-size: 28px;
+                color: rgb(219, 172, 172);
+            }
+            
+            .wrapper .section .top_navbar .hamburger a:hover{
+                color: rgb(150, 224, 225);
+            }           
+            body.active .wrapper .sidebar{
+                left: -225px;
+                padding-top: 10px;
+            }
+            
+            body.active .wrapper .section{
+                margin-left: 0;
+                width: 100%;
+            }
+            .cross{
+                height: 2px;
+                padding-right:10px ;
+                color: rgb(253, 248, 248);
+                padding-bottom: 0px;
+                padding-top: 10px;
+            }
+            .h{
+                background-color: white;
+            }
+            .c{
+                color:rgb(234, 95, 35);
+                
+            }
+            
+        </style>
+        
+    </head>
+    <body>
+        <div class="hamburger">
+            <a href="#" onclick="openNav()">
+                <i class="px-4 pt-4 fas fa-bars c" align="left"></i>
+            </a>
+        
+    </div>
+            <div class="wrapper">
+                <div class="sidebar" id="p">
+                    <div class="section flex">
+                        
+                            <div class="hamburger">
+                                <a href="#" onclick="myClose()">
+                                    <i class="px-3 fas fa-bars" align="left"></i>
+                                </a>
+                            
+                        </div>
+                        
+            
+                    </div>
+                        <!--<div align="right" class="cross" onclick="myClose()" onfocus="">
+                        <a href="#" class="cross" ><h2>X</h2></a></div>-->
+                        <br>
+                        <ul >
+                        <li>
+                            <a href="#" >
+                                <!--<i class="fas fa-home"></i>-->
+                                <img src="home.png" width="35px" height="35px">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="exer.png" width="35px" height="35px">
+                                <!--<span class="item">Exercise</span>-->
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="yoga1.png" width="35px" height="35px">
+                                <!--<span class="item">Yoga</span>-->
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="about.png" width="35px" height="35px">
+                                <!--<span class="item">About</span>-->
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="creators.png" width="35px" height="35px">
+                                <!--<span class="item">Creators</span>-->
+                            </a>
+                        </li>
+                       
+                    </ul>
+                    
+                </div>
+             <!--   
+               <nav class="text-white flex justify-between bg-black">
+            <ul class="mx-80 pl-35 py-4 flex space-x-28 text-xl font-serif">
+                <li class= "cursor-pointer hover:bg-slate-500" id="p1">Home</li>
+                <li class="cursor-pointer hover:bg-slate-500" id="p2">Exercise</li>
+                <li class= "cursor-pointer hover:bg-slate-500" id="p3">Yoga</li>
+                <li class=" cursor-pointer hover:bg-slate-500" id="p4">About</li>
+            </ul>
+            <div>
+                <a href="#" onclick="openNav()">
+                    <img src="https://randomuser.me/api/portraits/med/men/75.jpg" class=" h-12 w-12 px-1 py-1 rounded-full justify-end" >
+                </a>
+            </div>
+            
+        </nav>-->
+    </div>
+        <frameset cols="50%,50%">
+            <frame></frame>
+            <frame></frame>
+        </frameset>
+       <script>
+            function openNav() {
+                document.getElementById("p").style.width = "100px";
+              }
+              function myClose() {
+                document.getElementById("p").style.width="0px"
+                document.getElementById("this").style.visibility="visible";
+              }
+              var hamburger = document.querySelector(".hamburger");
+	hamburger.addEventListener("click", function(){
+		document.querySelector("body").classList.toggle("active");
+	});
+            //h-12 w-12 px-1 py-1 
+            //px-28 py-4
+        </script>
+        
+    </body>
+</html>
